@@ -1,0 +1,238 @@
+{
+	"info": {
+		"_postman_id": "d609c5f4-4df3-4fbc-aa98-714291a16c8e",
+		"name": "testcake",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21384237"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "divyaraj@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456789",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:34251/api/users/login.json",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "34251",
+					"path": [
+						"api",
+						"users",
+						"login.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Article List",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOjIsImV4cCI6MTcwOTcxNjgzOX0.TUmVttdV-Vr-apr2biT_URdRTwAqvgWylppAQrmwn9pAAvlL7fRqfbZjJx1uB3gXrnAYwv7kb1w5TjkU1NdT7_XgK6xUCIxwBeJffdF8kyYqy-WVfm7L7IATpXwNCTEZHSW9r44x1XueFqA9J9xU65t74Lw5J5jV1T8kXoq5BOk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:34251/api/articles.json",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "34251",
+					"path": [
+						"api",
+						"articles.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Article Add",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOjIsImV4cCI6MTcwOTcxNzE4MH0.BWR1QcA2H0hfy2EGWmMAMqKp1Ut4HM7VYuZdAPJINArzYj2wAXJXLM_TELqlSapgiBQW-DGluA1yF4oEhWER56jXwOeIv-Ot3LCg3rAZ3F4qlT_VXO9DRscUghQEiVc-ZUU_9ZrG0AXGnOBDqYnaP0jcKDTX4X2_lltH1RUgGVA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\" : \"Article 4\",\n    \"body\" : \"Article Body 4\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:34251/api/articles.json",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "34251",
+					"path": [
+						"api",
+						"articles.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Article Edit",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOjIsImV4cCI6MTcwOTcxNzE4MH0.BWR1QcA2H0hfy2EGWmMAMqKp1Ut4HM7VYuZdAPJINArzYj2wAXJXLM_TELqlSapgiBQW-DGluA1yF4oEhWER56jXwOeIv-Ot3LCg3rAZ3F4qlT_VXO9DRscUghQEiVc-ZUU_9ZrG0AXGnOBDqYnaP0jcKDTX4X2_lltH1RUgGVA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\" : \"Article 4 1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:34251/api/articles/4.json",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "34251",
+					"path": [
+						"api",
+						"articles",
+						"4.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Article View",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOjIsImV4cCI6MTcwOTcxNzE4MH0.BWR1QcA2H0hfy2EGWmMAMqKp1Ut4HM7VYuZdAPJINArzYj2wAXJXLM_TELqlSapgiBQW-DGluA1yF4oEhWER56jXwOeIv-Ot3LCg3rAZ3F4qlT_VXO9DRscUghQEiVc-ZUU_9ZrG0AXGnOBDqYnaP0jcKDTX4X2_lltH1RUgGVA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:34251/api/articles/2.json",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "34251",
+					"path": [
+						"api",
+						"articles",
+						"2.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Article Delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOjIsImV4cCI6MTcwOTcxNzE4MH0.BWR1QcA2H0hfy2EGWmMAMqKp1Ut4HM7VYuZdAPJINArzYj2wAXJXLM_TELqlSapgiBQW-DGluA1yF4oEhWER56jXwOeIv-Ot3LCg3rAZ3F4qlT_VXO9DRscUghQEiVc-ZUU_9ZrG0AXGnOBDqYnaP0jcKDTX4X2_lltH1RUgGVA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:34251/api/articles/2.json",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "34251",
+					"path": [
+						"api",
+						"articles",
+						"2.json"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
